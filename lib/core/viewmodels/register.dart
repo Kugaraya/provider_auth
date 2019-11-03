@@ -11,13 +11,10 @@ class _RegisterViewState extends State<RegisterViewModel> {
 
   @override
   Widget build(BuildContext context) {
-    final _logo = Hero(
-      tag: 'hero',
-      child: CircleAvatar(
-        backgroundColor: Colors.transparent,
-        radius: 48.0,
-        child: Image.asset("assets/teacher.png"),
-      ),
+    final _logo = CircleAvatar(
+      backgroundColor: Colors.transparent,
+      radius: 48.0,
+      child: Image.asset("assets/logo.png"),
     );
 
     final _fNameField = TextFormField(
@@ -99,13 +96,9 @@ class _RegisterViewState extends State<RegisterViewModel> {
             SizedBox(height: 8.0),
             _passwordField,
             SizedBox(height: 8.0),
-            Row(
-              children: <Widget>[
-                _fNameField,
-                SizedBox(width: 8.0),
-                _lNameField,
-              ],
-            ),
+            _fNameField,
+            SizedBox(height: 8.0),
+            _lNameField,
             SizedBox(height: 24.0),
             _registerButton,
           ],

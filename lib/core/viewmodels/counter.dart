@@ -10,29 +10,29 @@ class CounterViewModel extends StatelessWidget {
       builder: (context) => locator<Counter>(),
       child: Consumer<Counter>(
         builder: (context, model, child) => Scaffold(
-          appBar: AppBar(
-            title: Text("Counter"),
-          ),
           body: Container(
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text("Interact with the FloatingActionButtons!"),
-                  Text("${model.getCounter()}", style: TextStyle(color: Colors.black, fontSize: 24.0, fontWeight: FontWeight.bold)),
+                  Text("${model.getCounter()}", style: TextStyle(color: Colors.black, fontSize: 40.0, fontWeight: FontWeight.bold)),
                 ],
-              )
+              ),
             )
           ),
           floatingActionButton: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               FloatingActionButton(
+                heroTag: null,
                 onPressed: model.increment,
                 tooltip: 'Increment',
                 child: Icon(Icons.add),
               ),
               SizedBox(height: 10),
               FloatingActionButton(
+                heroTag: null,
                 onPressed: model.decrement,
                 tooltip: 'Increment',
                 child: Icon(Icons.remove),

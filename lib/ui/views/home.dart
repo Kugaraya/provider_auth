@@ -12,7 +12,6 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
   TextEditingController _searchCtrl = TextEditingController();
   TabController _tabController;
   bool _activeSearch = false;
-  bool _isSearching = false;
 
   @override
   void initState() { 
@@ -34,14 +33,16 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
       controller: _searchCtrl,
       autofocus: true,
       decoration: InputDecoration(
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),        
+        border: OutlineInputBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(32.0), bottomLeft: Radius.circular(32.0))),
         prefixIcon: Icon(Icons.search, color: Colors.blueGrey),
-        suffixIcon: _isSearching ? IconButton(
+        suffixIcon: IconButton(
           icon: Icon(Icons.cancel, color: Colors.black),
-          onPressed: () => setState(() => _searchCtrl.clear()),
-        ) : null,
+          onPressed: () => setState(() {
+            _searchCtrl.clear();
+            _activeSearch = false;
+          }),
+        ),
       ),
-      onChanged: (text) => setState(() => _isSearching = text.length > 0),
     );
   }
 
@@ -62,20 +63,10 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
           Container(
             width: MediaQuery.of(context).size.width * 0.60,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(32.0), bottomLeft: Radius.circular(32.0)),
               color: Colors.white,
             ),
-            child: Row(
-              children: <Widget>[
-                _search(),
-                IconButton(
-                  icon: Icon(Icons.arrow_forward),
-                  onPressed: () => setState(() {
-                    _searchCtrl.clear();
-                    _activeSearch = false;
-                  }),
-                )
-              ],
-            ),
+            child: _search()
           ) : IconButton(
             icon: Icon(Icons.search),
             onPressed: () => setState(() => _activeSearch = true),

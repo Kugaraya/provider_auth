@@ -13,13 +13,10 @@ class _LoginViewState extends State<LoginViewModel> {
 
   @override
   Widget build(BuildContext context) {
-    final _logo = Hero(
-      tag: 'hero',
-      child: CircleAvatar(
-        backgroundColor: Colors.transparent,
-        radius: 48.0,
-        child: Image.asset("assets/teacher.png"),
-      ),
+    final _logo = CircleAvatar(
+      backgroundColor: Colors.transparent,
+      radius: 48.0,
+      child: Image.asset("assets/logo.png"),
     );
 
     final _emailField = TextFormField(
