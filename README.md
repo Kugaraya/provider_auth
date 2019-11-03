@@ -1,5 +1,5 @@
 # provider_auth
-An MVVM based flutter boilerplate that has Splash/Login/Register/Home pages with Provider State Management Architecture
+An MVVM based flutter boilerplate that has Splash/Login/Register/Home pages with Provider State Management
 
 > The aforementioned screens has nothing to do with backend, this boilerplate only has a working counter application same with flutter's base template but uses Provider's State Management and Get_It for service locating in `lib/locator.dart`
 
