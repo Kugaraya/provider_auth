@@ -14,4 +14,6 @@ An MVVM based flutter boilerplate that has Splash/Login/Register/Home pages with
 
 ## Note
 
-You can use the code as you like as the very purpose of this is to serve as reference in contrast to the very saturated amount of tutorials concerning Provider State Management itself
+You can use the code as much as you like since the very purpose of this is to serve as reference in contrast to the very saturated amount of tutorials concerning Provider State Management itself
+
+> You know as they say, applying and experiencing what you have read is the best way to learn it
