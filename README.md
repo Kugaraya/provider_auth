@@ -19,6 +19,6 @@ You can use the code as much as you like since the very purpose of this is to se
 > You know as they say, applying and experiencing what you have read is the best way to learn it
 
 
-![Splash](https://imgur.com/TECmi4e) ![Login](https://imgur.com/rj03Nm8) ![Register](https://imgur.com/0ynLA1I)
+![Splash](https://i.imgur.com/TECmi4e.jpg) ![Login](https://i.imgur.com/rj03Nm8.jpg) ![Register](https://i.imgur.com/0ynLA1I.jpg)
 
-![Home with Counter](https://imgur.com/9knQcSz) ![Home with Search Box](https://imgur.com/4UoFG85) ![Clipped Menu](https://imgur.com/ljtwWcg)
+![Home with Counter](https://i.imgur.com/9knQcSz.jpg) ![Home with Search Box](https://i.imgur.com/4UoFG85.jpg) ![Clipped Menu](https://i.imgur.com/ljtwWcg.jpg)
