@@ -1,7 +1,7 @@
+import 'package:provider/provider.dart';
 import 'package:provider_auth/core/models/counter.dart';
 import 'package:provider_auth/locator.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class CounterViewModel extends StatelessWidget {
   @override
@@ -27,20 +27,18 @@ class CounterViewModel extends StatelessWidget {
               FloatingActionButton(
                 heroTag: null,
                 onPressed: model.increment,
-                tooltip: 'Increment',
-                child: Icon(Icons.add),
+                child: Text("+"),
               ),
               SizedBox(height: 10),
               FloatingActionButton(
                 heroTag: null,
                 onPressed: model.decrement,
-                tooltip: 'Increment',
-                child: Icon(Icons.remove),
+                child: Text("-"),
               )
             ],
           ),
-        ),
-      ),
+        )
+      )
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider_auth/core/viewmodels/login.dart';
 import 'package:provider_auth/core/viewmodels/register.dart';
+import 'package:provider_auth/locator.dart';
 
 class AuthView extends StatefulWidget {
   AuthView({Key key}) : super(key : key);
@@ -16,6 +17,7 @@ class _AuthViewState extends State<AuthView> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
+    setupLocator();
     _tabController = TabController(vsync: this, length: 2);
   }
 

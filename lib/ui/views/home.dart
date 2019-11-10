@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_auth/core/models/counter.dart';
 import 'package:provider_auth/core/viewmodels/counter.dart';
 import 'package:provider_auth/ui/widgets/menu.dart';
+import 'package:provider_auth/locator.dart';
 
 class HomeView extends StatefulWidget {
   @override
@@ -10,18 +13,15 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin{
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController _searchCtrl = TextEditingController();
-  TabController _tabController;
   bool _activeSearch = false;
 
   @override
   void initState() { 
     super.initState();
-    _tabController = TabController(vsync: this, length: 3);
   }
 
   @override
   void dispose() {
-    _tabController.dispose();
     super.dispose();
   }
 
@@ -73,7 +73,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
           )
         ],
       ),
-      body: CounterViewModel()
+      body:  CounterViewModel(),
     );
   }
 }
