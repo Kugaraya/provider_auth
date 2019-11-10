@@ -70,7 +70,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
           )
         ],
       ),
-      body:  CounterViewModel(),
+      body: CounterViewModel(),
     );
   }
 }
