@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:provider_auth/core/models/counter.dart';
 import 'package:provider_auth/core/viewmodels/counter.dart';
 import 'package:provider_auth/ui/widgets/menu.dart';
-import 'package:provider_auth/locator.dart';
 
 class HomeView extends StatefulWidget {
   @override

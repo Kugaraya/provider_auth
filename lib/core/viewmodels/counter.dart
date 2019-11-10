@@ -1,5 +1,5 @@
-import 'package:provider/provider.dart';
 import 'package:provider_auth/core/models/counter.dart';
+import 'package:provider/provider.dart';
 import 'package:provider_auth/locator.dart';
 import 'package:flutter/material.dart';
 
@@ -27,13 +27,13 @@ class CounterViewModel extends StatelessWidget {
               FloatingActionButton(
                 heroTag: null,
                 onPressed: model.increment,
-                child: Text("+"),
+                child: Icon(Icons.add),
               ),
               SizedBox(height: 10),
               FloatingActionButton(
                 heroTag: null,
                 onPressed: model.decrement,
-                child: Text("-"),
+                child: Icon(Icons.remove),
               )
             ],
           ),
